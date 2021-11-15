@@ -21,11 +21,17 @@ def sales_reports(log_file):
 sales_reports(log_file)
 # Invoking the sales_reports function passing in the log_file
 
-# def lotsa_melons(log_file):
-#     for line in log_file:
-#         line = line.rstrip()
-#         quantity = line[2:2]
-#         if int(quantity) > 10:
-#             print(line)
+log_file.close()
+
+log_file = open("um-server-01.txt")
+
+def lotsa_melons(log_file):
+    for line in log_file:
+        line = line.rstrip()
+        quant = line[16:18]
+        # print(quant)
+        if int(quant) > 10:
+            print(line)
             
-#     lotsa_melons(log_file)
+
+lotsa_melons(log_file)
