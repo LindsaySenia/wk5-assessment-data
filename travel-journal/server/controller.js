@@ -262,7 +262,12 @@ module.exports = {
             ('Yemen'),
             ('Zambia'),
             ('Zimbabwe');
-        `).then(() => {
+
+            insert into cities (name, rating, country_id) 
+            values ('Detroit', 5, 2),
+                   ('Lansing', 4, 35),
+                   ('Ann Arbor', 1, 20);`)
+            .then(() => {
             console.log('DB seeded!')
             res.sendStatus(200)
         }).catch(err => console.log('error seeding DB', err))
